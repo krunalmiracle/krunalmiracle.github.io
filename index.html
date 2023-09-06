@@ -18,9 +18,10 @@
   <body>
     <!-- Your content goes here -->
     <div class="md:flex flex-col md:flex-row md:min-h-screen w-full">
+      <div class="h-[56px] md:h-screen"></div>
       <div
         @click.away="open = false"
-        class="flex flex-col fixed md:h-screen bg-gray w-full md:w-64 text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0"
+        class="flex flex-col fixed top-0 md:h-screen bg-gray w-full md:w-64 text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0"
         x-data="{ open: false }"
       >
         <div
@@ -94,13 +95,13 @@
           
         </nav>
       </div>
-      <main class="md:pl-64 pt-16 w-full">
-        <div id="home" name="home" class="w-full min-h-screen py-12 bg-yellow-100">Home</div>
-        <div id="about" name="about" class="w-full min-h-screen bg-red-100">About</div>
-        <div id="services" name="services" class="w-full min-h-screen bg-blue-100">Services</div>
-        <div id="portfolio" name="portfolio" class="w-full min-h-screen bg-green-100">Portfolio</div>
-        <div id="blog" name="blog" class="w-full min-h-screen bg-pink-100">Blog</div>
-        <div id="contact" name="contact" class="w-full min-h-screen bg-indigo-100">Contact</div>
+      <main class="md:pl-64 w-full">
+        <div id="home" name="home" class="w-full min-h-screen pt-16 bg-yellow-100">Home</div>
+        <div id="about" name="about" class="w-full pt-16 min-h-screen bg-red-100">About</div>
+        <div id="services" name="services" class="w-full pt-16 min-h-screen bg-blue-100">Services</div>
+        <div id="portfolio" name="portfolio" class="w-full pt-16 min-h-screen bg-green-100">Portfolio</div>
+        <div id="blog" name="blog" class="w-full min-h-screen pt-16 bg-pink-100">Blog</div>
+        <div id="contact" name="contact" class="w-full min-h-screen pt-16 bg-indigo-100">Contact</div>
       </main>
     </div>
   </body>
