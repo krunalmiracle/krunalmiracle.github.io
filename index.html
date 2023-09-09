@@ -3,17 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
     <title>Krunal Badsiwal</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
-    <link rel="manifest" href="./site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon-16x16.png"
+    />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css"
+    />
   </head>
   <body>
     <!-- Your content goes here -->
@@ -27,17 +51,17 @@
         <div
           class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between"
         >
-        <div class="flex flex-col space-y-1 items-center justify-center">
+          <div class="flex flex-col space-y-1 items-center justify-center">
             <img
-            src="img/profile.png"
-            class="hidden md:block w-24 h-24 m-auto rounded-full shadow"
-            alt="Avatar"
-          />
-          <div class="font-semibold">
-            <h3><span>Krunal Badsiwal</h3>
+              src="img/avatar.png"
+              class="hidden md:block w-24 h-24 m-auto rounded-full shadow"
+              alt="Avatar"
+            />
+            <div class="font-semibold">
+              <h3>Krunal Badsiwal</h3>
             </div>
-        </div>
-          
+          </div>
+
           <button
             class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline"
             @click="open = !open"
@@ -69,18 +93,18 @@
           >
           <a
             class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-            href="#about"
-            >About</a
+            href="#experience"
+            >Experience</a
           >
           <a
             class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-            href="#services"
-            >Services</a
+            href="#skill"
+            >Skills</a
           >
           <a
             class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-            href="#portfolio"
-            >Portfolio</a
+            href="#education"
+            >Education</a
           >
           <a
             class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
@@ -92,16 +116,620 @@
             href="#contact"
             >Contact</a
           >
-          
         </nav>
       </div>
-      <main class="md:pl-64 w-full">
-        <div id="home" name="home" class="w-full min-h-screen pt-16 bg-yellow-100">Home</div>
-        <div id="about" name="about" class="w-full pt-16 min-h-screen bg-red-100">About</div>
-        <div id="services" name="services" class="w-full pt-16 min-h-screen bg-blue-100">Services</div>
-        <div id="portfolio" name="portfolio" class="w-full pt-16 min-h-screen bg-green-100">Portfolio</div>
-        <div id="blog" name="blog" class="w-full min-h-screen pt-16 bg-pink-100">Blog</div>
-        <div id="contact" name="contact" class="w-full min-h-screen pt-16 bg-indigo-100">Contact</div>
+      <main class="md:ml-64 p-8 w-full bg-gray-100">
+        <section
+          id="home"
+          name="home"
+          class="w-full min-h-screen pt-16 text-gray-600 body-font"
+        >
+          <div
+            class="container mx-auto flex px-5 py-24 items-center justify-center flex-col"
+          >
+            <img
+              class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
+              alt="hero"
+              src="/img/avatar.png"
+            />
+            <div class="text-center lg:w-2/3 w-full">
+              <h1
+                class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"
+              >
+                Krunal Badsiwal, Full Stack Developer
+              </h1>
+              <p class="mb-8 leading-relaxed">
+                Highly motivated and results-driven Junior Full Stack Developer
+                with a solid foundation in web development and software
+                engineering. Proficient in harnessing cutting-edge technologies
+                to craft innovative solutions. Demonstrated expertise in
+                problem-solving and a consistent track record of making
+                impactful contributions to projects. Possesses a dynamic ability
+                to adapt to evolving challenges and excels in collaborative,
+                cross-functional team environments, consistently delivering
+                top-tier results.
+              </p>
+              <div class="flex flex-row justify-center items-center gap-x-8">
+                <a href="#contact" class="relative inline-block text-lg group">
+                  <span
+                    class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white"
+                  >
+                    <span
+                      class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"
+                    ></span>
+                    <span
+                      class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"
+                    ></span>
+                    <span class="relative">HIRE ME</span>
+                  </span>
+                  <span
+                    class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+                    data-rounded="rounded-lg"
+                  ></span>
+                </a>
+                <a
+                  href="#experience"
+                  class="relative inline-block text-lg group"
+                >
+                  <span
+                    class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-white bg-gray-900 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-gray-800"
+                  >
+                    <span
+                      class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-900"
+                    ></span>
+                    <span
+                      class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-50 group-hover:-rotate-180 ease"
+                    ></span>
+                    <span class="relative">EXPERIENCE</span>
+                  </span>
+                  <span
+                    class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+                    data-rounded="rounded-lg"
+                  ></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          id="experience"
+          name="experience"
+          class="w-full flex flex-col lg:flex-row gap-8 pt-16 min-h-screen"
+        >
+          <div class="w-full lg:w-1/3">
+            <h2 class="text-3xl font-bold sm:text-4xl">Experience</h2>
+
+            <p class="mt-4 text-gray-800">
+              With a passion for continuous learning and growth, my professional
+              journey has been a tapestry of diverse experiences that have honed
+              my skills and enriched my perspective. From my early roles in
+              customer service, where I cultivated strong communication and
+              problem-solving abilities, to my recent leadership positions in
+              project management, which have sharpened my organizational and
+              team collaboration skills, my journey has been defined by a
+              commitment to excellence and adaptability. These experiences have
+              not only equipped me with a robust skill set but have also
+              instilled in me a deep sense of resilience and a hunger for new
+              challenges. I am excited to leverage this wealth of experience to
+              contribute meaningfully to future endeavors.
+            </p>
+          </div>
+          <div class="w-full lg:w-2/3">
+            <ol class="relative border-l border-gray-200 dark:border-gray-700">
+              <li class="mb-10 ml-4">
+                <div
+                  class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+                ></div>
+                <div
+                  class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                >
+                  06/2022 - 07/2023 | Talentdesk - Remote, United Kingdom
+                </div>
+                <h3 class="text-lg font-semibold">
+                  Junior Full Stack Developer
+                </h3>
+                <p class="mb-4 text-base font-normal">
+                  Developed a fully integrated freelancing platform with
+                  payment, invoicing, and management functions Collaborated in
+                  an Agile methodology environment using JIRA Played multiple
+                  roles within the company, including feature developer, bug
+                  solver, and documentation specialist Technologies used:
+                  ReactJS, MySQL, NodeJS, Amazon, AWS, Kubernetes, Docker
+                </p>
+                <p>
+                  Contact : Jordan Hammond
+                  https://www.linkedin.com/in/jordan-hammond/
+                </p>
+              </li>
+              <li class="mb-10 ml-4">
+                <div
+                  class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+                ></div>
+                <div
+                  class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                >
+                  10/2021 - 05/2022 | Polytechnic University of Catalonia, World
+                  Health Organization - Barcelona
+                </div>
+                <h3 class="text-lg font-semibold">Junior Software Engineer</h3>
+                <p class="mb-4 text-base font-normal">
+                  Collaborated on a scholarship project in partnership with UPC
+                  CCD and WHO, focusing on automation within GoData software.
+                  Improved the GoData anonymization process to meet new
+                  requirements and use cases. Technologies used: Jovo,
+                  AngularJS, Chrome extensions.
+                </p>
+                <p>
+                  Contact : Toni Oller https://www.linkedin.com/in/tonioller/
+                </p>
+              </li>
+              <li class="mb-10 ml-4">
+                <div
+                  class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+                ></div>
+                <div
+                  class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                >
+                  05/2021 - 10/2021 | Alteraid - Barcelona, Spain
+                </div>
+                <h3 class="text-lg font-semibold">
+                  Junior Software Engineer and Controller
+                </h3>
+                <p class="mb-4 text-base font-normal">
+                  Managed cloud deployment of services and applications across
+                  iOS, Android, and Web platforms. • Produced documentation and
+                  reports for business clients. • Conducted software stability
+                  tests for health and medical environments. • Designed project
+                  architecture and user interface (UI/UX). • Technologies used:
+                  Flutter, NodeJS, and TypeScript.
+                </p>
+                <p>
+                  Contact : Toni Oller https://www.linkedin.com/in/tonioller/
+                </p>
+              </li>
+              <li class="mb-10 ml-4">
+                <div
+                  class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+                ></div>
+                <div
+                  class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                >
+                  01/2021 - 04/2021 | Polytechnic University of Catalonia, World
+                  Health Organization - Barcelona, Spain
+                </div>
+                <h3 class="text-lg font-semibold">Junior Programmer</h3>
+                <p class="mb-4 text-base font-normal">
+                  Completed an internship project with UPC CCD and WHO, focused
+                  on anonymization and data protection in GoData software. •
+                  Collected stakeholder information to understand use cases and
+                  best practices. • Developed a frontend extension for Chrome,
+                  Internet, and Firefox to manage user licenses. • Implemented a
+                  licensing server for security and authorization using NodeJS
+                  and TypeScript. • Technologies used: Typescript, NodeJs and
+                  AngularJs
+                </p>
+                <p>
+                  Contact : Toni Oller https://www.linkedin.com/in/tonioller/
+                </p>
+              </li>
+            </ol>
+          </div>
+        </section>
+        <section id="skill" name="skill" class="w-full pt-16 min-h-screen">
+          <!-- <div class="flex flex-col">
+            <h3>Technical Skills</h3>
+            <ul>
+              <li>
+                Frontend Technologies: ReactJs, AngularJS, Flutter, Sveltekit
+              </li>
+              <li>
+                Backend Technologies: NodeJs, Express, Kubernetes, Docker Cloud
+                Services: Amazon AWS, Google Cloud
+              </li>
+              <li>Database Systems: MySQL</li>
+              <li>Agile Methodology: Scrum and Lean development</li>
+              <li>Tool: Microsoft Word, Microsoft Excel</li>
+              <li>
+                Data Analysis: Python (pandas, Numpy, Matplotlib) Google Drive,
+                Microsoft Team, Excel, Word, Visio
+              </li>
+            </ul>
+          </div> -->
+          <section class="text-black">
+            <div
+              class="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8"
+            >
+              <div class="mx-auto text-center">
+                <h2 class="text-3xl font-bold sm:text-4xl">Technical Skills</h2>
+
+                <p class="mt-4 text-gray-800">
+                  Proficient in a diverse range of technical skills, I bring a
+                  strong foundation of expertise to my professional endeavors.
+                  From coding and software development to data analysis and
+                  system administration, I have honed my technical capabilities
+                  to deliver efficient solutions and drive innovation. My skill
+                  set is complemented by a keen problem-solving aptitude and a
+                  passion for staying updated with emerging technologies,
+                  ensuring that I can adapt and excel in any technical challenge
+                  that comes my way. Check out my portfolio website to explore
+                  my projects and see how my technical skills have been applied
+                  to real-world scenarios.
+                </p>
+              </div>
+
+              <div
+                class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+              >
+                <div
+                  class="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-blue-600 hover:shadow-blue-600/10"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-10 w-10 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    />
+                  </svg>
+
+                  <h2 class="mt-4 text-xl font-bold text-black">
+                    Frontend Technologies
+                  </h2>
+
+                  <p class="mt-1 text-sm text-gray-800">
+                    ReactJs, AngularJS, Flutter, Sveltekit
+                  </p>
+                </div>
+
+                <div
+                  class="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-blue-600 hover:shadow-blue-600/10"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-10 w-10 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    />
+                  </svg>
+
+                  <h2 class="mt-4 text-xl font-bold text-black">
+                    Backend Technologies
+                  </h2>
+
+                  <p class="mt-1 text-sm text-gray-800">
+                    NodeJs, Express, Kubernetes, Docker Cloud Services: Amazon
+                    AWS, Google Cloud
+                  </p>
+                </div>
+
+                <div
+                  class="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-blue-600 hover:shadow-blue-600/10"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-10 w-10 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    />
+                  </svg>
+
+                  <h2 class="mt-4 text-xl font-bold text-black">
+                    Database Systems
+                  </h2>
+
+                  <p class="mt-1 text-sm text-gray-800">
+                    MySQL, NodeJs & PostgreSQL
+                  </p>
+                </div>
+
+                <div
+                  class="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-blue-600 hover:shadow-blue-600/10"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-10 w-10 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    />
+                  </svg>
+
+                  <h2 class="mt-4 text-xl font-bold text-black">
+                    Agile Methodology
+                  </h2>
+
+                  <p class="mt-1 text-sm text-gray-800">
+                    Scrum and Lean development
+                  </p>
+                </div>
+
+                <div
+                  class="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-blue-600 hover:shadow-blue-600/10"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-10 w-10 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    />
+                  </svg>
+
+                  <h2 class="mt-4 text-xl font-bold text-black">Tool</h2>
+
+                  <p class="mt-1 text-sm text-gray-800">
+                    Microsoft Word, Microsoft Excel
+                  </p>
+                </div>
+
+                <div
+                  class="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-blue-600 hover:shadow-blue-600/10"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-10 w-10 text-blue-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    />
+                  </svg>
+
+                  <h2 class="mt-4 text-xl font-bold text-black">
+                    Data Analysis
+                  </h2>
+
+                  <p class="mt-1 text-sm text-gray-800">
+                    Python (pandas, Numpy, Matplotlib) Google Drive, Microsoft
+                    Team, Excel, Word, Visio
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-12 text-center">
+                <a href="#_" class="relative inline-block text-lg group">
+                  <span
+                    class="relative z-10 block px-6 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white"
+                  >
+                    <span
+                      class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"
+                    ></span>
+                    <span
+                      class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"
+                    ></span>
+                    <span class="relative">CONTACT NOW</span>
+                  </span>
+                  <span
+                    class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+                    data-rounded="rounded-lg"
+                  ></span>
+                </a>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section
+          id="education"
+          name="education"
+          class="w-full pt-16 min-h-screen bg-green-100"
+        >
+          Education
+        </section>
+
+        <section
+          id="blog"
+          name="blog"
+          class="w-full min-h-screen pt-16 bg-pink-100"
+        >
+          Blog
+        </section>
+
+        <section
+          id="contact"
+          name="contact"
+          class="w-full min-h-screen pt-16 bg-indigo-100 bg-gray-100"
+        >
+          <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+              <div class="lg:col-span-2 lg:py-12">
+                <p class="max-w-xl text-lg">
+                  At the same time, the fact that we are wholly owned and
+                  totally independent from manufacturer and other group control
+                  gives you confidence that we will only recommend what is right
+                  for you.
+                </p>
+
+                <div class="mt-8">
+                  <a href="" class="text-2xl font-bold text-pink-600">
+                    0151 475 4450
+                  </a>
+
+                  <address class="mt-2 not-italic">
+                    282 Kevin Brook, Imogeneborough, CA 58517
+                  </address>
+                </div>
+              </div>
+
+              <div
+                class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12"
+              >
+                <form action="" class="space-y-4">
+                  <div>
+                    <label class="sr-only" for="name">Name</label>
+                    <input
+                      class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                      placeholder="Name"
+                      type="text"
+                      id="name"
+                    />
+                  </div>
+
+                  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div>
+                      <label class="sr-only" for="email">Email</label>
+                      <input
+                        class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                        placeholder="Email address"
+                        type="email"
+                        id="email"
+                      />
+                    </div>
+
+                    <div>
+                      <label class="sr-only" for="phone">Phone</label>
+                      <input
+                        class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                        placeholder="Phone Number"
+                        type="tel"
+                        id="phone"
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    class="grid grid-cols-1 gap-4 text-center sm:grid-cols-3"
+                  >
+                    <div>
+                      <input
+                        class="peer sr-only"
+                        id="option1"
+                        type="radio"
+                        tabindex="-1"
+                        name="option"
+                      />
+
+                      <label
+                        for="option1"
+                        class="block w-full rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white"
+                        tabindex="0"
+                      >
+                        <span class="text-sm"> Option 1 </span>
+                      </label>
+                    </div>
+
+                    <div>
+                      <input
+                        class="peer sr-only"
+                        id="option2"
+                        type="radio"
+                        tabindex="-1"
+                        name="option"
+                      />
+
+                      <label
+                        for="option2"
+                        class="block w-full rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white"
+                        tabindex="0"
+                      >
+                        <span class="text-sm"> Option 2 </span>
+                      </label>
+                    </div>
+
+                    <div>
+                      <input
+                        class="peer sr-only"
+                        id="option3"
+                        type="radio"
+                        tabindex="-1"
+                        name="option"
+                      />
+
+                      <label
+                        for="option3"
+                        class="block w-full rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white"
+                        tabindex="0"
+                      >
+                        <span class="text-sm"> Option 3 </span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="sr-only" for="message">Message</label>
+
+                    <textarea
+                      class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                      placeholder="Message"
+                      rows="8"
+                      id="message"
+                    ></textarea>
+                  </div>
+
+                  <div class="mt-4">
+                    <button
+                      type="submit"
+                      class="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
+                    >
+                      Send Enquiry
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   </body>
