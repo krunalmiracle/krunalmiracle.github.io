@@ -1,0 +1,25 @@
+:root {
+    
+  }
+  
+.text-framed{
+    position: relative;
+    display: inline-flex;
+    --tw-text-opacity: 1;
+    z-index: 20;
+}
+.text-framed::before{
+    --tw-rotate: -3deg;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1;
+    --tw-translate-y: 20%;
+    z-index: 10;
+    inset: 0px;
+    position: absolute;
+    content: var(--tw-content);
+    opacity: 0.2;
+    background-color: rgb(	37, 99, 235);
+    transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
