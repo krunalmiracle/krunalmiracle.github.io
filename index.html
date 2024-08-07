@@ -3,46 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Krunal Miracle - Full Stack Developer</title>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <title>Krunal Badsiwal - Full Stack Developer</title>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              sans: ["Inter", "sans-serif"],
             },
             colors: {
-              'color-1': '#ff6b6b',
-              'color-2': '#4ecdc4',
-              'color-3': '#feca57',
-              'color-4': '#ff8a5b',
-              'color-5': '#45aaf2',
+              "color-1": "#405D72",
+              "color-2": "#758694",
+              "color-3": "#F7E7DC",
+              "color-4": "#FFF8F3",
+              "color-5": "#45aff2",
+              "pastel-yellow": "#F7F9F2",
+              "pastel-blue": "#BBE9FF",
+              "pastel-red": "#ff6f69",
+              "pastel-green": "#91DDCF",
+              "pastel-pink": "#ffbad2",
             },
           },
         },
-      }
+      };
     </script>
+    <style>
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .scrollbar-hide {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+    </style>
   </head>
   <body class="bg-gray-100 font-sans text-black leading-relaxed">
-    <div x-data="app()" x-cloak>
+    <div x-data="app()">
       <!-- Header -->
-      <header class="bg-color-1 border-4 border-black shadow-[8px_8px_0_0_#000] p-4 mb-8 transform -rotate-1">
+      <header
+        class="bg-color-1 border-4 border-black shadow-[8px_8px_0_0_#000] p-4 mb-8 transform -rotate-1"
+      >
         <nav class="container mx-auto">
-          <h1 class="text-6xl font-black uppercase mb-4 text-white stroke-2 stroke-black">Krunal Miracle</h1>
+          <a
+            href="/"
+            class="text-6xl font-black uppercase mb-4 text-white stroke-2 stroke-black"
+          >
+            Krunal Badsiwal
+          </a>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <a href="#" @click.prevent="changePage('#about')" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">About</a>
-            <a href="#" @click.prevent="changePage('#experience')" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Experience</a>
-            <a href="#" @click.prevent="changePage('#projects')" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Projects</a>
-            <a href="#" @click.prevent="changePage('#education')" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Education</a>
-            <a href="#" @click.prevent="changePage('#skills')" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Skills</a>
-            <a href="#" @click.prevent="changePage('#contact')" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Contact</a>
-            <a href="#" @click.prevent="changePage('blog')" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Blog</a>
+            <a
+              href="#"
+              @click.prevent="changePage('#about')"
+              class="btn bg-color-3 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+              >About</a
+            >
+            <a
+              href="#"
+              @click.prevent="changePage('#experience')"
+              class="btn bg-pastel-green text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+              >Experience</a
+            >
+            <a
+              href="#"
+              @click.prevent="changePage('#projects')"
+              class="btn bg-color-3 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+              >Projects</a
+            >
+            <a
+              href="#"
+              @click.prevent="changePage('#language')"
+              class="btn bg-pastel-blue text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+              >Language</a
+            >
+            <a
+              href="#"
+              @click.prevent="changePage('#education')"
+              class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+              >Education</a
+            >
+            <a
+              href="#"
+              @click.prevent="changePage('#skills')"
+              class="btn bg-pastel-pink text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+              >Skills</a
+            >
+            <a
+              href="#"
+              @click.prevent="changePage('#contact')"
+              class="btn bg-pastel-green text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+              >Contact</a
+            >
+            <a
+              href="#"
+              @click.prevent="changePage('blog')"
+              class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+              >Blog</a
+            >
           </div>
-        </nav>        
+        </nav>
       </header>
 
       <!-- Main Content -->
@@ -50,244 +122,604 @@
         <!-- Home Page -->
         <div x-show="currentPage === 'home'">
           <!-- Hero Section -->
-          <section class="bg-color-2 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform rotate-1">
-            <img src="/images/profile.png" alt="Krunal Miracle" class="w-48 h-48 border-3 border-black transform rotate-6 mb-4">
-            <h1 class="text-6xl font-black uppercase mb-2 text-white stroke-2 stroke-black">Krunal Miracle</h1>
-            <h2 class="text-4xl font-bold mb-4 text-black">Full Stack Developer</h2>
-            <a href="/resume.pdf" download class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Download Resume</a>
+          <section
+            class="bg-pastel-blue border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform rotate-1"
+          >
+            <img
+              src="/images/profile2.png"
+              alt="Krunal Badsiwal"
+              class="w-48 h-48 border-3 border-black transform rotate-6 mb-4"
+            />
+            <h1
+              class="text-6xl font-black uppercase mb-2 font-display stroke-2 stroke-black"
+            >
+              Krunal Badsiwal
+            </h1>
+            <h2 class="text-4xl font-display text-6xl mb-6 text-gray-900">
+              Full Stack Developer & Aerospace Engineer
+            </h2>
+            <a
+              href="/public/Resume Krunal Badsiwal 2024.pdf"
+              download
+              class="inline-block bg-pastel-red text-gray-900 px-6 py-3 text-2xl font-bold border-4 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all"
+              >Download Resume</a
+            >
           </section>
 
           <!-- About Section -->
-          <section id="about" class="bg-color-3 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform -rotate-1">
-            <h2 class="text-4xl font-black uppercase mb-4 text-black">About Me</h2>
-            <p class="text-lg">I'm a highly skilled and self-organized Engineering graduate with a passion for innovative projects. With experience in Agile development, data science, and React, I've worked on cloud deployment, UX/UI, and app development. As a Full Stack Web Developer, I'm always eager for new challenges and continuously expanding my skillset in the ever-evolving tech landscape.</p>
+          <section
+            id="about"
+            class="bg-color-3 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform -rotate-1"
+          >
+            <h2 class="text-4xl font-black uppercase mb-4 text-black">
+              About Me
+            </h2>
+            <p class="text-lg">
+              I'm a highly skilled and self-organized Engineering graduate with
+              a passion for innovative projects. With experience in Agile
+              development, data science, and React, I've worked on cloud
+              deployment, UX/UI, and app development. As a Full Stack Web
+              Developer, I'm always eager for new challenges and continuously
+              expanding my skillset in the ever-evolving tech landscape.
+            </p>
           </section>
-
           <!-- Experience Section -->
-          <section id="experience" class="bg-color-4 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform rotate-1">
-            <h2 class="text-4xl font-black uppercase mb-4 text-black"><i class="fas fa-briefcase mr-2"></i>Experience</h2>
+          <section
+            id="experience"
+            class="bg-pastel-green border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform rotate-1"
+          >
+            <h2 class="text-4xl font-black uppercase mb-4 text-black">
+              <i class="fas fa-briefcase mr-2"></i>Experience
+            </h2>
             <!-- Experience content remains unchanged -->
             <div class="mb-8">
-              <h3 class="text-2xl font-bold">Full Stack Web Developer - TalentDesk.io</h3>
+              <h3 class="text-2xl font-bold">
+                Full Stack Web Developer - TalentDesk.io
+              </h3>
               <p class="text-lg">February 2023 - February 2024</p>
               <ul class="list-disc list-inside mt-2">
-                <li>Developed a fully integrated freelancing management platform using ReactJS, MySQL, NodeJs, AWS, and Docker.</li>
-                <li>Collaborated in an Agile environment with JIRA, playing multiple roles including feature developer, bug solver, and documentation specialist.</li>
-                <li>Enhanced the admin panel with features for user management, invoicing, tasks, subscriptions, and active projects.</li>
-                <li>Integrated Google Analytics for user-side analytics and worked with logs for debugging.</li>
-                <li>Connected Hubspot CRM with the ReactJS and NodeJS full-stack app for marketing pages.</li>
+                <li>
+                  Developed a fully integrated freelancing management platform
+                  using ReactJS, MySQL, NodeJs, AWS, and Docker.
+                </li>
+                <li>
+                  Collaborated in an Agile environment with JIRA, playing
+                  multiple roles including feature developer, bug solver, and
+                  documentation specialist.
+                </li>
+                <li>
+                  Enhanced the admin panel with features for user management,
+                  invoicing, tasks, subscriptions, and active projects.
+                </li>
+                <li>
+                  Integrated Google Analytics for user-side analytics and worked
+                  with logs for debugging.
+                </li>
+                <li>
+                  Connected Hubspot CRM with the ReactJS and NodeJS full-stack
+                  app for marketing pages.
+                </li>
               </ul>
             </div>
             <div class="mb-8">
               <h3 class="text-2xl font-bold">Software Developer - Alteraid</h3>
               <p class="text-lg">April 2022 - January 2023</p>
               <ul class="list-disc list-inside mt-2">
-                <li>Delivered projects from design to testing, including new programs, enhancements, and modifications.</li>
-                <li>Managed cloud deployment of services and applications across iOS, Android, and Web platforms using Flutter, Node.js, Python, and TypeScript.</li>
-                <li>Utilized technologies such as Flutter, Angular, Node.js, Google Cloud, and Jest for testing.</li>
+                <li>
+                  Delivered projects from design to testing, including new
+                  programs, enhancements, and modifications.
+                </li>
+                <li>
+                  Managed cloud deployment of services and applications across
+                  iOS, Android, and Web platforms using Flutter, Node.js,
+                  Python, and TypeScript.
+                </li>
+                <li>
+                  Utilized technologies such as Flutter, Angular, Node.js,
+                  Google Cloud, and Jest for testing.
+                </li>
               </ul>
             </div>
             <div class="mb-8">
-              <h3 class="text-2xl font-bold">Software Engineer - World Health Organization and UPC</h3>
+              <h3 class="text-2xl font-bold">
+                Software Engineer - World Health Organization and UPC
+              </h3>
               <p class="text-lg">March 2021 - March 2022</p>
               <ul class="list-disc list-inside mt-2">
-                <li>Improved GoData (Java) software for the UPC CCD scholarship project and WHO.</li>
-                <li>Implemented a DRM licensing system using Angular for frontend and Node.js with TypeScript for backend.</li>
-                <li>Integrated Python for speech analysis, text handling, Speech-to-Text, and Text-to-Speech functionalities.</li>
-                <li>Contributed to the development of an open-source solution for secure data exchange in health informatics.</li>
+                <li>
+                  Improved GoData (Java) software for the UPC CCD scholarship
+                  project and WHO.
+                </li>
+                <li>
+                  Implemented a DRM licensing system using Angular for frontend
+                  and Node.js with TypeScript for backend.
+                </li>
+                <li>
+                  Integrated Python for speech analysis, text handling,
+                  Speech-to-Text, and Text-to-Speech functionalities.
+                </li>
+                <li>
+                  Contributed to the development of an open-source solution for
+                  secure data exchange in health informatics.
+                </li>
               </ul>
             </div>
           </section>
-
           <!-- Projects Section -->
-          <section id="projects" class="bg-color-5 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform -rotate-1">
-            <h2 class="text-4xl font-black uppercase mb-4 text-black"><i class="fas fa-project-diagram mr-2"></i>Projects</h2>
-            <!-- Projects content remains unchanged -->
-            <div class="bg-white p-6 rounded-lg shadow-md mb-6">
-              <h3 class="text-2xl font-bold mb-2">Instant Helperr</h3>
-              <p class="mb-4">Platform connecting users with trustworthy caregivers for on-demand childcare.</p>
-              <ul class="list-disc list-inside mt-2">
-                <li>Architected and developed a comprehensive care services platform.</li>
-                <li>Implemented features including user management, job posting, smart matching, contract negotiation, task tracking, and secure payment processing.</li>
-                <li>Utilized SvelteKit and TailwindCSS for a responsive frontend, Node.js for backend logic, and SQLite with Drizzle ORM for efficient data management.</li>
-                <li>Engineered a Docker-based deployment strategy for scalability and easy maintenance.</li>
+          <section
+            id="projects"
+            class="bg-color-3 border-4 border-color-1 shadow-[8px_8px_0_0_#405D72] p-8 mb-8 transform -rotate-1"
+          >
+            <h2 class="text-4xl font-black uppercase mb-4 text-color-1">
+              <i class="fas fa-project-diagram mr-2"></i>Projects
+            </h2>
+
+            <div
+              class="bg-white p-6 border-3 border-color-1 shadow-[5px_5px_0_0_#405D72] mb-6"
+            >
+              <h3 class="text-2xl font-bold mb-2 text-color-1">
+                Instant Helperr 2
+              </h3>
+              <p class="mb-4 text-color-2">
+                Platform connecting users with trustworthy caregivers for
+                on-demand childcare.
+              </p>
+
+              <!-- Image Gallery -->
+              <div
+                x-data="{ currentImage: 1, totalImages: 6 }"
+                class="relative mb-4"
+              >
+                <div class="flex items-center justify-center">
+                  <button
+                    @click="currentImage = currentImage > 1 ? currentImage - 1 : totalImages"
+                    class="absolute left-0 z-10 bg-color-1 text-color-4 p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity"
+                  >
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+
+                  <div class="relative w-full min-h-[48vh] overflow-hidden">
+                    <img
+                      :src="'images/' + (currentImage > 1 ? currentImage - 1 : totalImages) + '.png'"
+                      alt="Previous image"
+                      class="absolute left-0 w-1/6 h-full object-cover opacity-50 blur-sm"
+                    />
+                    <img
+                      :src="'images/' + currentImage + '.png'"
+                      alt="Current image"
+                      class="absolute left-1/2 transform -translate-x-1/2 w-2/3 h-full object-cover border-2 border-color-1"
+                    />
+                    <img
+                      :src="'images/' + (currentImage < totalImages ? currentImage + 1 : 1) + '.png'"
+                      alt="Next image"
+                      class="absolute right-0 w-1/6 h-full object-cover opacity-50 blur-sm"
+                    />
+                  </div>
+
+                  <button
+                    @click="currentImage = currentImage < totalImages ? currentImage + 1 : 1"
+                    class="absolute right-0 z-10 bg-color-1 text-color-4 p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity"
+                  >
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <ul class="list-disc list-inside mt-2 text-color-2">
+                <li>
+                  Architected and developed a comprehensive care services
+                  platform.
+                </li>
+                <li>
+                  Implemented features including user management, job posting,
+                  smart matching, contract negotiation, task tracking, and
+                  secure payment processing.
+                </li>
+                <li>
+                  Utilized SvelteKit and TailwindCSS for a responsive frontend,
+                  Node.js for backend logic, and SQLite with Drizzle ORM for
+                  efficient data management.
+                </li>
+                <li>
+                  Engineered a Docker-based deployment strategy for scalability
+                  and easy maintenance.
+                </li>
                 <li>Integrated Stripe for secure payment processing.</li>
               </ul>
-              <p class="mt-4"><strong>Technologies used:</strong> SvelteKit, Node.js, SQLite, Server Sent Events, Drizzle ORM, Docker, TailwindCSS, Stripe API.</p>
+              <p class="mt-4 text-color-1">
+                <strong>Technologies used:</strong> SvelteKit, Node.js, SQLite,
+                Server Sent Events, Drizzle ORM, Docker, TailwindCSS, Stripe
+                API.
+              </p>
             </div>
           </section>
-
+          <!-- Languages Section -->
+          <section
+            id="language"
+            class="bg-pastel-blue border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform rotate-1"
+          >
+            <h2
+              class="text-4xl font-black uppercase mb-4 text-black stroke-2 stroke-black"
+            >
+              <i class="fas fa-language mr-2"></i>Language
+            </h2>
+            <p>
+              <i class="fas fa-flag-usa mr-1 text-lg mb-2"></i>English (Native),
+              <i class="fas fa-flag mr-1 text-lg mb-2"></i>Spanish (Advanced),
+              <i class="fas fa-flag mr-1 text-lg mb-2"></i>Catalan (Advanced),
+              <i class="fas fa-flag-checkered mr-1 text-lg mb-2"></i>Hindi
+              (Native)
+            </p>
+          </section>
           <!-- Education Section -->
-          <section id="education" class="bg-color-1 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform rotate-1">
-            <h2 class="text-4xl font-black uppercase mb-4 text-white stroke-2 stroke-black"><i class="fas fa-graduation-cap mr-2"></i>Education</h2>
-            <h3 class="text-2xl font-bold mb-2"><i class="fas fa-university mr-2"></i>Polytechnic University of Catalonia</h3>
-            <p class="text-lg mb-2"><i class="fas fa-plane mr-2"></i>Bachelor in Aerospace Systems Engineering (September 2016 - October 2022)</p>
-            <p class="text-lg"><i class="fas fa-network-wired mr-2"></i>Bachelor in Telematics Engineering (September 2016 - October 2022)</p>
+          <section
+            id="education"
+            class="bg-color-3 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform -rotate-1"
+          >
+            <h2
+              class="text-4xl font-black uppercase mb-4 text-black stroke-2 stroke-black"
+            >
+              <i class="fas fa-graduation-cap mr-2"></i>Education
+            </h2>
+            <h3 class="text-2xl font-bold mb-2">
+              <i class="fas fa-university mr-2"></i>Polytechnic University of
+              Catalonia
+            </h3>
+            <p class="text-lg mb-2">
+              <i class="fas fa-plane mr-2"></i>Bachelor in Aerospace Systems
+              Engineering (September 2016 - October 2022)
+            </p>
+            <p class="text-lg">
+              <i class="fas fa-network-wired mr-2"></i>Bachelor in Telematics
+              Engineering (September 2016 - October 2022)
+            </p>
           </section>
 
           <!-- Skills Section -->
-          <section id="skills" class="bg-color-2 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform -rotate-1">
-            <h2 class="text-4xl font-black uppercase mb-4 text-black"><i class="fas fa-tools mr-2"></i>Skills</h2>
+          <section
+            id="skills"
+            class="bg-pastel-pink border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform -rotate-1"
+          >
+            <h2 class="text-4xl font-black uppercase mb-4 text-black">
+              <i class="fas fa-tools mr-2"></i>Skills
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div class="bg-color-3 p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform -rotate-2">
-                <h3 class="text-2xl font-bold mb-2"><i class="fas fa-language  mr-2"></i>Languages</h3>
-                <p><i class="fas fa-flag-usa mr-1"></i>English (Native), <i class="fas fa-flag mr-1"></i>Spanish (Advanced), <i class="fas fa-flag mr-1"></i>Catalan (Advanced), <i class="fas fa-flag-checkered mr-1"></i>Hindi (Native)</p>
-              </div>
               <!-- Skill items -->
-              <div class="bg-color-3 p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform -rotate-2">
-                <h3 class="text-2xl font-bold mb-2"><i class="fas fa-laptop-code mr-2"></i>Frontend</h3>
-                <p><i class="fab fa-react mr-1"></i>React, <i class="fab fa-js-square mr-1"></i>Svelte, <i class="fab fa-flutter mr-1"></i>Flutter, <i class="fab fa-angular mr-1"></i>Angular, <i class="fab fa-vuejs mr-1"></i>Vue, <i class="fab fa-android mr-1"></i>Kotlin</p>
+              <div
+                class="bg-white p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform -rotate-2"
+              >
+                <h3 class="text-2xl font-bold mb-2">
+                  <i class="fas fa-laptop-code mr-2"></i>Frontend
+                </h3>
+                <p>
+                  <i class="fab fa-react mr-1"></i>React,
+                  <i class="fab fa-js-square mr-1"></i>Svelte,
+                  <i class="fab fa-flutter mr-1"></i>Flutter,
+                  <i class="fab fa-angular mr-1"></i>Angular,
+                  <i class="fab fa-vuejs mr-1"></i>Vue,
+                  <i class="fab fa-android mr-1"></i>Kotlin
+                </p>
               </div>
-              <div class="bg-color-5 p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform rotate-2">
-                <h3 class="text-2xl font-bold mb-2"><i class="fas fa-server mr-2"></i>Backend</h3>
-                <p><i class="fab fa-node-js mr-1"></i>Node.js, <i class="fab fa-python mr-1"></i>Python, <i class="fab fa-java mr-1"></i>Java, <i class="fab fa-dart mr-1"></i>Dart</p>
+              <div
+                class="bg-white p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform rotate-2"
+              >
+                <h3 class="text-2xl font-bold mb-2">
+                  <i class="fas fa-server mr-2"></i>Backend
+                </h3>
+                <p>
+                  <i class="fab fa-node-js mr-1"></i>Node.js,
+                  <i class="fab fa-python mr-1"></i>Python,
+                  <i class="fab fa-java mr-1"></i>Java,
+                  <i class="fab fa-dart mr-1"></i>Dart
+                </p>
               </div>
               <!-- Add more skill items as needed -->
-              <div class="bg-color-3 p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform -rotate-2">
-                <h3 class="text-2xl font-bold mb-2"><i class="fas fa-database mr-2"></i>Database</h3>
-                <p><i class="fas fa-table mr-1"></i>MySQL, <i class="fas fa-elephant mr-1"></i>Postgres, <i class="fas fa-leaf mr-1"></i>MongoDB, <i class="fas fa-file-alt mr-1"></i>SQLite</p>
+              <div
+                class="bg-white p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform -rotate-2"
+              >
+                <h3 class="text-2xl font-bold mb-2">
+                  <i class="fas fa-database mr-2"></i>Database
+                </h3>
+                <p>
+                  <i class="fas fa-table mr-1"></i>MySQL,
+                  <i class="fas fa-elephant mr-1"></i>Postgres,
+                  <i class="fas fa-leaf mr-1"></i>MongoDB,
+                  <i class="fas fa-file-alt mr-1"></i>SQLite
+                </p>
               </div>
-              <div class="bg-color-5 p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform rotate-2">
-                <h3 class="text-2xl font-bold mb-2"><i class="fas fa-tasks mr-2"></i>Project Management</h3>
-                <p><i class="fas fa-chart-line mr-1"></i>Agile, <i class="fas fa-users mr-1"></i>Scrum, <i class="fas fa-tachometer-alt mr-1"></i>Lean, <i class="fas fa-stream mr-1"></i>Waterfall</p>
+              <div
+                class="bg-white p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform rotate-2"
+              >
+                <h3 class="text-2xl font-bold mb-2">
+                  <i class="fas fa-tasks mr-2"></i>Project Management
+                </h3>
+                <p>
+                  <i class="fas fa-chart-line mr-1"></i>Agile,
+                  <i class="fas fa-users mr-1"></i>Scrum,
+                  <i class="fas fa-tachometer-alt mr-1"></i>Lean,
+                  <i class="fas fa-stream mr-1"></i>Waterfall
+                </p>
               </div>
-              <div class="bg-color-3 p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform -rotate-2">
-                <h3 class="text-2xl font-bold mb-2"><i class="fas fa-cloud mr-2"></i>Cloud Computing</h3>
-                <p><i class="fab fa-aws mr-1"></i>Amazon Web Services, <i class="fab fa-google mr-1"></i>Google Cloud Computing, <i class="fab fa-microsoft mr-1"></i>Azure</p>
+              <div
+                class="bg-white p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform -rotate-2"
+              >
+                <h3 class="text-2xl font-bold mb-2">
+                  <i class="fas fa-cloud mr-2"></i>Cloud Computing
+                </h3>
+                <p>
+                  <i class="fab fa-aws mr-1"></i>Amazon Web Services,
+                  <i class="fab fa-google mr-1"></i>Google Cloud Computing,
+                  <i class="fab fa-microsoft mr-1"></i>Azure
+                </p>
               </div>
-              <div class="bg-color-5 p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform rotate-2">
-                <h3 class="text-2xl font-bold mb-2"><i class="fas fa-cogs mr-2"></i>DevOps</h3>
-                <p><i class="fab fa-docker mr-1"></i>Docker, <i class="fab fa-linux mr-1"></i>Linux</p>
+              <div
+                class="bg-white p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform rotate-2"
+              >
+                <h3 class="text-2xl font-bold mb-2">
+                  <i class="fas fa-cogs mr-2"></i>DevOps
+                </h3>
+                <p>
+                  <i class="fab fa-docker mr-1"></i>Docker,
+                  <i class="fab fa-linux mr-1"></i>Linux
+                </p>
               </div>
-              <div class="bg-color-3 p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform -rotate-2">
-                <h3 class="text-2xl font-bold mb-2"><i class="fas fa-mobile-alt mr-2"></i>Mobile</h3>
-                <p><i class="fab fa-apple mr-1"></i>iOS, <i class="fab fa-android mr-1"></i>Android (Flutter, Java, Kotlin)</p>
+              <div
+                class="bg-white p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform -rotate-2"
+              >
+                <h3 class="text-2xl font-bold mb-2">
+                  <i class="fas fa-mobile-alt mr-2"></i>Mobile
+                </h3>
+                <p>
+                  <i class="fab fa-apple mr-1"></i>iOS,
+                  <i class="fab fa-android mr-1"></i>Android (Flutter, Java,
+                  Kotlin)
+                </p>
               </div>
-             
             </div>
           </section>
 
           <!-- Certifications Section -->
-          <section id="certifications" class="bg-color-3 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform rotate-1">
-            <h2 class="text-4xl font-black uppercase mb-4 text-black"><i class="fas fa-certificate mr-2"></i>Certifications</h2>
+          <section
+            id="certifications"
+            class="bg-color-3 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform rotate-1"
+          >
+            <h2 class="text-4xl font-black uppercase mb-4 text-black">
+              <i class="fas fa-certificate mr-2"></i>Certifications
+            </h2>
             <ul class="list-disc list-inside">
-              <li class="text-lg mb-2"><i class="fas fa-check-circle mr-2"></i>Agile Software Development and Testing</li>
-              <li class="text-lg mb-2"><i class="fas fa-check-circle mr-2"></i>Software Deployment, Operations, and Maintenance</li>
-              <li class="text-lg"><i class="fas fa-check-circle mr-2"></i>CSSLP Cert Prep: Software Deployment, Operations, and Maintenance</li>
+              <li class="text-lg mb-2">
+                <i class="fas fa-check-circle mr-2"></i>Agile Software
+                Development and Testing
+              </li>
+              <li class="text-lg mb-2">
+                <i class="fas fa-check-circle mr-2"></i>Software Deployment,
+                Operations, and Maintenance
+              </li>
+              <li class="text-lg">
+                <i class="fas fa-check-circle mr-2"></i>CSSLP Cert Prep:
+                Software Deployment, Operations, and Maintenance
+              </li>
             </ul>
           </section>
 
           <!-- Contact Section -->
-          <section id="contact" class="bg-color-4 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform -rotate-1">
-            <h2 class="text-4xl font-black uppercase mb-4 text-black">Contact Me</h2>
+          <section
+            id="contact"
+            class="bg-pastel-green border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform -rotate-1"
+          >
+            <h2 class="text-4xl font-black uppercase mb-4 text-black">
+              Contact Me
+            </h2>
             <p class="text-lg mb-2">Phone: +CV</p>
             <p class="text-lg mb-2">Email: krunalmiracle@gmail.com</p>
-            <p class="text-lg mb-4">Portfolio: <a href="https://krunalmiracle.github.io" target="_blank" class="btn bg-color-5 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">krunalmiracle.github.io</a></p>
-            <form @submit.prevent="submitForm" class="space-y-4">
+            <p class="text-lg mb-4">
+              Portfolio:
+              <a
+                href="https://krunalmiracle.github.io"
+                target="_blank"
+                class="btn bg-color-5 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+                >krunalmiracle.github.io</a
+              >
+            </p>
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              class="space-y-4"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="656bd683-717c-40ac-b1c0-582efc11805e"
+              />
               <!-- Form fields remain unchanged -->
               <div class="mb-4">
-                <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
-                <input type="text" id="name" name="name" required class="w-full px-3 py-2 border rounded-lg">
+                <label for="name" class="block text-gray-700 font-bold mb-2"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-3 py-2 border rounded-lg"
+                />
               </div>
               <div class="mb-4">
-                <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
-                <input type="email" id="email" name="email" required class="w-full px-3 py-2 border rounded-lg">
+                <label for="email" class="block text-gray-700 font-bold mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-3 py-2 border rounded-lg"
+                />
               </div>
               <div class="mb-4">
-                <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
-                <textarea id="message" name="message" required class="w-full px-3 py-2 border rounded-lg" rows="4"></textarea>
+                <label for="message" class="block text-gray-700 font-bold mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  class="w-full px-3 py-2 border rounded-lg"
+                  rows="4"
+                ></textarea>
               </div>
-              <button type="submit" class="btn bg-color-5 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Send Message</button>
+              <!-- hCaptcha Spam Protection -->
+              <div class="h-captcha my-1.5 p-0" data-captcha="true"></div>
+              <button
+                type="submit"
+                class="btn bg-color-5 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+              >
+                Send Message
+              </button>
             </form>
           </section>
         </div>
 
         <!-- Blog Page -->
-        <div x-show="currentPage === 'blog'" class="bg-color-5 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform rotate-1">
-          <h2 class="text-4xl font-black uppercase mb-4 text-black">Blog Posts</h2>
+        <div
+          x-show="currentPage === 'blog'"
+          class="bg-color-5 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform rotate-1"
+        >
+          <h2 class="text-4xl font-black uppercase mb-4 text-black">
+            Blog Posts
+          </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <template x-for="post in blogPosts" :key="post.filename">
-              <div class="bg-white p-6 border-3 border-black shadow-[5px_5px_0_0_#000]">
-                <img x-show="post.image" :src="post.image" :alt="post.title" class="w-full h-48 object-cover mb-4 border-2 border-black">
+              <div
+                class="bg-white p-6 border-3 border-black shadow-[5px_5px_0_0_#000]"
+              >
+                <img
+                  x-show="post.image"
+                  :src="post.image"
+                  :alt="post.title"
+                  class="w-full h-48 object-cover mb-4 border-2 border-black"
+                />
                 <h3 class="text-2xl font-bold mb-2" x-text="post.title"></h3>
                 <p class="mb-4" x-text="post.description"></p>
-                <a href="#" @click.prevent="readBlogPost(post.filename)" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Read More</a>
+                <a
+                  href="#"
+                  @click.prevent="readBlogPost(post.filename)"
+                  class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+                  >Read More</a
+                >
               </div>
             </template>
           </div>
         </div>
 
         <!-- Blog Post Content -->
-        <div x-show="currentPage === 'blogPost'" class="bg-color-1 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform -rotate-1">
-          <a href="#" @click.prevent="changePage('blog')" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all mb-4">&larr; Back to Blog</a>
+        <div
+          x-show="currentPage === 'blogPost'"
+          class="bg-color-1 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform -rotate-1"
+        >
+          <a
+            href="#"
+            @click.prevent="changePage('blog')"
+            class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all mb-4"
+            >&larr; Back to Blog</a
+          >
           <template x-if="currentBlogPost">
             <div>
-              <h2 class="text-4xl font-black uppercase mb-4 text-white stroke-2 stroke-black" x-text="currentBlogPost.title"></h2>
-              <div x-html="currentBlogPost.content" class="prose prose-lg max-w-none"></div>
+              <h2
+                class="text-4xl font-black uppercase my-4 text-white stroke-2 stroke-black"
+                x-text="currentBlogPost.title"
+              ></h2>
+              <div
+                x-html="currentBlogPost.content"
+                class="prose prose-lg max-w-none"
+              ></div>
             </div>
           </template>
         </div>
       </main>
 
       <!-- Footer -->
-      <footer class="bg-color-2 border-4 border-black shadow-[8px_8px_0_0_#000] p-4 mt-8 transform rotate-1">
+      <footer
+        class="bg-color-2 border-4 border-black shadow-[8px_8px_0_0_#000] p-4 mt-8 transform rotate-1"
+      >
         <div class="container mx-auto text-center">
-          <p class="text-lg font-bold">&copy; 2023 Krunal Miracle. All rights reserved.</p
-          </div>
-        </footer>
-      </div>
-  
-      <script>
-        function app() {
-          return {
-            currentPage: 'home',
-            blogPosts: [
-              { filename: 'post1.md', title: 'My First Blog Post', description: 'An exciting journey into the world of blogging.', image: 'images/cycle1.jpg' },
-              { filename: 'post2.md', title: 'Mastering Full-Stack Development', description: 'Tips and tricks for becoming a proficient full-stack developer.', image: 'images/computer.jpg' },
-              { filename: 'post3.md', title: 'The Future of Web Development', description: 'Exploring emerging trends and technologies in web development.', image: 'images/future.avif' },
-            ],
-            currentBlogPost: null,
-            init() {
-      this.changePage(window.location.hash.substring(1) || 'home');
-    },
-    changePage(page) {
-      if (page.startsWith('#')) {
-        // Handle anchor links
-        this.currentPage = 'home';
-        window.location.hash = page;
-      } else {
-        this.currentPage = page;
-        window.location.hash = page;
-      }
-    },
-            async readBlogPost(filename) {
-              try {
-                const response = await fetch(`/blog/${filename}`);
-                if (!response.ok) {
-                  throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const markdown = await response.text();
-                const post = this.blogPosts.find(post => post.filename === filename);
-                if (post) {
-                  const parsedContent = marked.parse(markdown);
-                  this.currentBlogPost = {
-                    title: post.title,
-                    content: parsedContent
-                  };
-                  this.changePage('blogPost');
-                } else {
-                  console.error('Blog post not found');
-                }
-              } catch (error) {
-                console.error('Error loading blog post:', error);
-              }
+          <p class="text-lg font-bold">
+            &copy; 2023 Krunal Badsiwal. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function app() {
+        return {
+          currentPage: "home",
+          blogPosts: [
+            {
+              filename: "post1.md",
+              title: "My First Blog Post",
+              description: "An exciting journey into the world of blogging.",
+              image: "images/cycle1.jpg",
             },
-            submitForm() {
-              // Add your form submission logic here
-              alert('Form submitted!');
+            {
+              filename: "post2.md",
+              title: "Mastering Full-Stack Development",
+              description:
+                "Tips and tricks for becoming a proficient full-stack developer.",
+              image: "images/computer.jpg",
+            },
+            {
+              filename: "post3.md",
+              title: "The Future of Web Development",
+              description:
+                "Exploring emerging trends and technologies in web development.",
+              image: "images/future.avif",
+            },
+          ],
+          currentBlogPost: null,
+          init() {
+            this.changePage(window.location.hash.substring(1) || "home");
+          },
+          changePage(page) {
+            if (page.startsWith("#")) {
+              // Handle anchor links
+              this.currentPage = "home";
+              window.location.hash = page;
+            } else {
+              this.currentPage = page;
+              window.location.hash = page;
             }
-          }
-        }
-      </script>
-    </body>
-  </html>
+          },
+          async readBlogPost(filename) {
+            try {
+              const response = await fetch(`/blog/${filename}`);
+              if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+              }
+              const markdown = await response.text();
+              const post = this.blogPosts.find(
+                (post) => post.filename === filename
+              );
+              if (post) {
+                const parsedContent = marked.parse(markdown);
+                this.currentBlogPost = {
+                  title: post.title,
+                  content: parsedContent,
+                };
+                this.changePage("blogPost");
+              } else {
+                console.error("Blog post not found");
+              }
+            } catch (error) {
+              console.error("Error loading blog post:", error);
+            }
+          },
+          submitForm() {
+            // Add your form submission logic here
+            alert("Form submitted!");
+          },
+        };
+      }
+    </script>
+  </body>
+</html>
