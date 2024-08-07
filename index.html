@@ -280,17 +280,17 @@
 
                   <div class="relative w-full min-h-[48vh] overflow-hidden">
                     <img
-                      :src="'images/' + (currentImage > 1 ? currentImage - 1 : totalImages) + '.png'"
+                      :src="'/images/' + (currentImage > 1 ? currentImage - 1 : totalImages) + '.png'"
                       alt="Previous image"
                       class="absolute left-0 w-1/6 h-full object-cover opacity-50 blur-sm"
                     />
                     <img
-                      :src="'images/' + currentImage + '.png'"
+                      :src="'/images/' + currentImage + '.png'"
                       alt="Current image"
                       class="absolute left-1/2 transform -translate-x-1/2 w-2/3 h-full object-cover border-2 border-color-1"
                     />
                     <img
-                      :src="'images/' + (currentImage < totalImages ? currentImage + 1 : 1) + '.png'"
+                      :src="'/images/' + (currentImage < totalImages ? currentImage + 1 : 1) + '.png'"
                       alt="Next image"
                       class="absolute right-0 w-1/6 h-full object-cover opacity-50 blur-sm"
                     />
@@ -659,21 +659,21 @@
               filename: "post1.md",
               title: "My First Blog Post",
               description: "An exciting journey into the world of blogging.",
-              image: "images/cycle1.jpg",
+              image: "/images/cycle1.jpg",
             },
             {
               filename: "post2.md",
               title: "Mastering Full-Stack Development",
               description:
                 "Tips and tricks for becoming a proficient full-stack developer.",
-              image: "images/computer.jpg",
+              image: "/images/computer.jpg",
             },
             {
               filename: "post3.md",
               title: "The Future of Web Development",
               description:
                 "Exploring emerging trends and technologies in web development.",
-              image: "images/future.avif",
+              image: "/images/future.avif",
             },
           ],
           currentBlogPost: null,
