@@ -1,617 +1,293 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-pastel-yellow">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Krunal Miracle - Full Stack Developer</title>
-    <script src="https://web3forms.com/client/script.js" async defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script
-      defer
-      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            colors: {
-              "pastel-yellow": "#F7F9F2",
-              "pastel-blue": "#BBE9FF",
-              "pastel-red": "#ff6f69",
-              "pastel-green": "#88d8b0",
-              "pastel-pink": "#ffbad2",
-            },
             fontFamily: {
-              display: ["Archivo Black", "sans-serif"],
-              body: ["Roboto", "sans-serif"],
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'color-1': '#ff6b6b',
+              'color-2': '#4ecdc4',
+              'color-3': '#feca57',
+              'color-4': '#ff8a5b',
+              'color-5': '#45aaf2',
             },
           },
         },
-      };
+      }
     </script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700&display=swap");
-    </style>
-    <style>
-      [x-cloak] {
-        display: none !important;
-      }
-    </style>
-    <style>
-      .prose h1 {
-        font-size: 2.25rem;
-        font-weight: bold;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
-      }
-      .prose h2 {
-        font-size: 1.875rem;
-        font-weight: bold;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
-      }
-      .prose h3 {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
-      }
-      .prose p {
-        margin-bottom: 1rem;
-      }
-      .prose ul,
-      .prose ol {
-        margin-left: 1.5rem;
-        margin-bottom: 1rem;
-      }
-      .prose li {
-        margin-bottom: 0.5rem;
-      }
-      .prose pre {
-        background-color: #f3f4f6;
-        padding: 1rem;
-        border-radius: 0.375rem;
-        overflow-x: auto;
-      }
-      .prose code {
-        font-family: monospace;
-        background-color: #f3f4f6;
-        padding: 0.2rem 0.4rem;
-        border-radius: 0.25rem;
-      }
-    </style>
   </head>
-  <body class="font-body text-gray-900" x-data="app()" x-init="init()">
-    <header class="bg-pastel-blue p-6 border-b-8 border-gray-900">
-      <div
-        class="container mx-auto flex flex-col md:flex-row justify-between items-center"
-      >
-        <h1 class="font-display text-5xl mb-4 md:mb-0 text-gray-900">
-          Krunal Miracle
-        </h1>
-        <nav class="space-y-2 md:space-y-0 md:space-x-4">
-          <a
-            href="#"
-            @click.prevent="changePage('home')"
-            class="inline-block bg-pastel-yellow text-gray-900 px-4 py-2 text-xl font-bold border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
-            >Home</a
-          >
-          <a
-            href="#"
-            @click.prevent="changePage('experience')"
-            class="inline-block bg-pastel-green text-gray-900 px-4 py-2 text-xl font-bold border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
-            >Experience</a
-          >
-          <a
-            href="#"
-            @click.prevent="changePage('project')"
-            class="inline-block bg-pastel-red text-gray-900 px-4 py-2 text-xl font-bold border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
-            >Project</a
-          >
-          <a
-            href="#"
-            @click.prevent="changePage('skills')"
-            class="inline-block bg-pastel-pink text-gray-900 px-4 py-2 text-xl font-bold border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
-            >Skills</a
-          >
-          <a
-            href="#"
-            @click.prevent="changePage('blog')"
-            class="inline-block bg-pastel-blue text-gray-900 px-4 py-2 text-xl font-bold border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
-            >Blog</a
-          >
-          <a
-            href="#"
-            @click.prevent="changePage('contact')"
-            class="inline-block bg-pastel-yellow text-gray-900 px-4 py-2 text-xl font-bold border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
-            >Contact</a
-          >
-        </nav>
-      </div>
-    </header>
+  <body class="bg-gray-100 font-sans text-black leading-relaxed">
+    <div x-data="app()" x-cloak>
+      <!-- Header -->
+      <header class="bg-color-1 border-4 border-black shadow-[8px_8px_0_0_#000] p-4 mb-8 transform -rotate-1">
+        <nav class="container mx-auto">
+          <h1 class="text-6xl font-black uppercase mb-4 text-white stroke-2 stroke-black">Krunal Miracle</h1>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <a href="#" @click.prevent="changePage('#about')" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">About</a>
+            <a href="#" @click.prevent="changePage('#experience')" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Experience</a>
+            <a href="#" @click.prevent="changePage('#projects')" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Projects</a>
+            <a href="#" @click.prevent="changePage('#education')" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Education</a>
+            <a href="#" @click.prevent="changePage('#skills')" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Skills</a>
+            <a href="#" @click.prevent="changePage('#contact')" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Contact</a>
+            <a href="#" @click.prevent="changePage('blog')" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Blog</a>
+          </div>
+        </nav>        
+      </header>
 
-    <main class="container mx-auto p-6 mt-8 min-h-screen">
-      <div x-show="currentPage === 'home'" class="space-y-12">
-        <section class="bg-pastel-blue p-8 border-8 border-gray-900 relative">
-          <h2 class="font-display text-6xl mb-6 text-gray-900">
-            Full Stack Developer & Aerospace Engineer
-          </h2>
-          <p class="mb-4 text-2xl">
-            Passionate about innovative projects and cutting-edge technologies.
-          </p>
-          <a
-            href="#"
-            @click.prevent="changePage('project')"
-            class="inline-block bg-pastel-red text-gray-900 px-6 py-3 text-2xl font-bold border-4 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all"
-            >View My Project</a
-          >
-          <div
-            class="absolute -top-4 -left-4 w-16 h-16 bg-pastel-yellow border-4 border-gray-900 rounded-full"
-          ></div>
-          <div
-            class="absolute -bottom-4 -right-4 w-24 h-24 bg-pastel-green border-4 border-gray-900 transform rotate-45"
-          ></div>
-        </section>
+      <!-- Main Content -->
+      <main class="container mx-auto p-4">
+        <!-- Home Page -->
+        <div x-show="currentPage === 'home'">
+          <!-- Hero Section -->
+          <section class="bg-color-2 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform rotate-1">
+            <img src="/images/profile.png" alt="Krunal Miracle" class="w-48 h-48 border-3 border-black transform rotate-6 mb-4">
+            <h1 class="text-6xl font-black uppercase mb-2 text-white stroke-2 stroke-black">Krunal Miracle</h1>
+            <h2 class="text-4xl font-bold mb-4 text-black">Full Stack Developer</h2>
+            <a href="/resume.pdf" download class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Download Resume</a>
+          </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div
-            class="bg-pastel-green p-6 border-8 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-          >
-            <h3 class="font-display text-3xl mb-4 text-gray-900">Education</h3>
-            <p class="text-xl mb-2">
-              <strong>Polytechnic University of Catalonia</strong>
-            </p>
-            <p class="text-lg mb-1">
-              Bachelor in Aerospace Systems Engineering
-            </p>
-            <p class="text-lg mb-4">Bachelor in Telematics Engineering</p>
-            <p class="text-lg italic">Sep 2016 - Oct 2022</p>
-          </div>
-          <div
-            class="bg-pastel-pink p-6 border-8 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-          >
-            <h3 class="font-display text-3xl mb-4 text-gray-900">Languages</h3>
-            <ul class="list-disc list-inside text-xl">
-              <li>English: Native</li>
-              <li>Spanish: Advanced</li>
-              <li>Catalan: Advanced</li>
-              <li>Hindi: Native</li>
-            </ul>
-          </div>
-        </section>
-      </div>
+          <!-- About Section -->
+          <section id="about" class="bg-color-3 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform -rotate-1">
+            <h2 class="text-4xl font-black uppercase mb-4 text-black">About Me</h2>
+            <p class="text-lg">I'm a highly skilled and self-organized Engineering graduate with a passion for innovative projects. With experience in Agile development, data science, and React, I've worked on cloud deployment, UX/UI, and app development. As a Full Stack Web Developer, I'm always eager for new challenges and continuously expanding my skillset in the ever-evolving tech landscape.</p>
+          </section>
 
-      <div x-show="currentPage === 'experience'" class="space-y-12">
-        <h2 class="font-display text-6xl mb-6 text-gray-900">
-          Professional Experience
-        </h2>
-        <div class="space-y-8">
-          <div
-            class="bg-pastel-yellow p-6 border-8 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-          >
-            <h3 class="font-display text-3xl mb-2 text-gray-900">
-              Full Stack Web Developer
-            </h3>
-            <p class="text-xl mb-2">
-              <strong>TalentDesk.io</strong> | Feb 2023 - Feb 2024
-            </p>
-            <ul class="list-disc list-inside text-lg">
-              <li>
-                Developed a fully integrated freelancing management platform
-                using ReactJS, MySQL, NodeJs, AWS, and Docker.
-              </li>
-              <li>
-                Enhanced the admin panel with features for user management,
-                invoicing, tasks, subscriptions, and active projects.
-              </li>
-              <li>
-                Integrated Google Analytics and Hubspot CRM with the full-stack
-                app.
-              </li>
+          <!-- Experience Section -->
+          <section id="experience" class="bg-color-4 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform rotate-1">
+            <h2 class="text-4xl font-black uppercase mb-4 text-black"><i class="fas fa-briefcase mr-2"></i>Experience</h2>
+            <!-- Experience content remains unchanged -->
+            <div class="mb-8">
+              <h3 class="text-2xl font-bold">Full Stack Web Developer - TalentDesk.io</h3>
+              <p class="text-lg">February 2023 - February 2024</p>
+              <ul class="list-disc list-inside mt-2">
+                <li>Developed a fully integrated freelancing management platform using ReactJS, MySQL, NodeJs, AWS, and Docker.</li>
+                <li>Collaborated in an Agile environment with JIRA, playing multiple roles including feature developer, bug solver, and documentation specialist.</li>
+                <li>Enhanced the admin panel with features for user management, invoicing, tasks, subscriptions, and active projects.</li>
+                <li>Integrated Google Analytics for user-side analytics and worked with logs for debugging.</li>
+                <li>Connected Hubspot CRM with the ReactJS and NodeJS full-stack app for marketing pages.</li>
+              </ul>
+            </div>
+            <div class="mb-8">
+              <h3 class="text-2xl font-bold">Software Developer - Alteraid</h3>
+              <p class="text-lg">April 2022 - January 2023</p>
+              <ul class="list-disc list-inside mt-2">
+                <li>Delivered projects from design to testing, including new programs, enhancements, and modifications.</li>
+                <li>Managed cloud deployment of services and applications across iOS, Android, and Web platforms using Flutter, Node.js, Python, and TypeScript.</li>
+                <li>Utilized technologies such as Flutter, Angular, Node.js, Google Cloud, and Jest for testing.</li>
+              </ul>
+            </div>
+            <div class="mb-8">
+              <h3 class="text-2xl font-bold">Software Engineer - World Health Organization and UPC</h3>
+              <p class="text-lg">March 2021 - March 2022</p>
+              <ul class="list-disc list-inside mt-2">
+                <li>Improved GoData (Java) software for the UPC CCD scholarship project and WHO.</li>
+                <li>Implemented a DRM licensing system using Angular for frontend and Node.js with TypeScript for backend.</li>
+                <li>Integrated Python for speech analysis, text handling, Speech-to-Text, and Text-to-Speech functionalities.</li>
+                <li>Contributed to the development of an open-source solution for secure data exchange in health informatics.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Projects Section -->
+          <section id="projects" class="bg-color-5 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform -rotate-1">
+            <h2 class="text-4xl font-black uppercase mb-4 text-black"><i class="fas fa-project-diagram mr-2"></i>Projects</h2>
+            <!-- Projects content remains unchanged -->
+            <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+              <h3 class="text-2xl font-bold mb-2">Instant Helperr</h3>
+              <p class="mb-4">Platform connecting users with trustworthy caregivers for on-demand childcare.</p>
+              <ul class="list-disc list-inside mt-2">
+                <li>Architected and developed a comprehensive care services platform.</li>
+                <li>Implemented features including user management, job posting, smart matching, contract negotiation, task tracking, and secure payment processing.</li>
+                <li>Utilized SvelteKit and TailwindCSS for a responsive frontend, Node.js for backend logic, and SQLite with Drizzle ORM for efficient data management.</li>
+                <li>Engineered a Docker-based deployment strategy for scalability and easy maintenance.</li>
+                <li>Integrated Stripe for secure payment processing.</li>
+              </ul>
+              <p class="mt-4"><strong>Technologies used:</strong> SvelteKit, Node.js, SQLite, Server Sent Events, Drizzle ORM, Docker, TailwindCSS, Stripe API.</p>
+            </div>
+          </section>
+
+          <!-- Education Section -->
+          <section id="education" class="bg-color-1 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform rotate-1">
+            <h2 class="text-4xl font-black uppercase mb-4 text-white stroke-2 stroke-black"><i class="fas fa-graduation-cap mr-2"></i>Education</h2>
+            <h3 class="text-2xl font-bold mb-2"><i class="fas fa-university mr-2"></i>Polytechnic University of Catalonia</h3>
+            <p class="text-lg mb-2"><i class="fas fa-plane mr-2"></i>Bachelor in Aerospace Systems Engineering (September 2016 - October 2022)</p>
+            <p class="text-lg"><i class="fas fa-network-wired mr-2"></i>Bachelor in Telematics Engineering (September 2016 - October 2022)</p>
+          </section>
+
+          <!-- Skills Section -->
+          <section id="skills" class="bg-color-2 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform -rotate-1">
+            <h2 class="text-4xl font-black uppercase mb-4 text-black"><i class="fas fa-tools mr-2"></i>Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-color-3 p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform -rotate-2">
+                <h3 class="text-2xl font-bold mb-2"><i class="fas fa-language  mr-2"></i>Languages</h3>
+                <p><i class="fas fa-flag-usa mr-1"></i>English (Native), <i class="fas fa-flag mr-1"></i>Spanish (Advanced), <i class="fas fa-flag mr-1"></i>Catalan (Advanced), <i class="fas fa-flag-checkered mr-1"></i>Hindi (Native)</p>
+              </div>
+              <!-- Skill items -->
+              <div class="bg-color-3 p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform -rotate-2">
+                <h3 class="text-2xl font-bold mb-2"><i class="fas fa-laptop-code mr-2"></i>Frontend</h3>
+                <p><i class="fab fa-react mr-1"></i>React, <i class="fab fa-js-square mr-1"></i>Svelte, <i class="fab fa-flutter mr-1"></i>Flutter, <i class="fab fa-angular mr-1"></i>Angular, <i class="fab fa-vuejs mr-1"></i>Vue, <i class="fab fa-android mr-1"></i>Kotlin</p>
+              </div>
+              <div class="bg-color-5 p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform rotate-2">
+                <h3 class="text-2xl font-bold mb-2"><i class="fas fa-server mr-2"></i>Backend</h3>
+                <p><i class="fab fa-node-js mr-1"></i>Node.js, <i class="fab fa-python mr-1"></i>Python, <i class="fab fa-java mr-1"></i>Java, <i class="fab fa-dart mr-1"></i>Dart</p>
+              </div>
+              <!-- Add more skill items as needed -->
+              <div class="bg-color-3 p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform -rotate-2">
+                <h3 class="text-2xl font-bold mb-2"><i class="fas fa-database mr-2"></i>Database</h3>
+                <p><i class="fas fa-table mr-1"></i>MySQL, <i class="fas fa-elephant mr-1"></i>Postgres, <i class="fas fa-leaf mr-1"></i>MongoDB, <i class="fas fa-file-alt mr-1"></i>SQLite</p>
+              </div>
+              <div class="bg-color-5 p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform rotate-2">
+                <h3 class="text-2xl font-bold mb-2"><i class="fas fa-tasks mr-2"></i>Project Management</h3>
+                <p><i class="fas fa-chart-line mr-1"></i>Agile, <i class="fas fa-users mr-1"></i>Scrum, <i class="fas fa-tachometer-alt mr-1"></i>Lean, <i class="fas fa-stream mr-1"></i>Waterfall</p>
+              </div>
+              <div class="bg-color-3 p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform -rotate-2">
+                <h3 class="text-2xl font-bold mb-2"><i class="fas fa-cloud mr-2"></i>Cloud Computing</h3>
+                <p><i class="fab fa-aws mr-1"></i>Amazon Web Services, <i class="fab fa-google mr-1"></i>Google Cloud Computing, <i class="fab fa-microsoft mr-1"></i>Azure</p>
+              </div>
+              <div class="bg-color-5 p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform rotate-2">
+                <h3 class="text-2xl font-bold mb-2"><i class="fas fa-cogs mr-2"></i>DevOps</h3>
+                <p><i class="fab fa-docker mr-1"></i>Docker, <i class="fab fa-linux mr-1"></i>Linux</p>
+              </div>
+              <div class="bg-color-3 p-4 border-3 border-black shadow-[5px_5px_0_0_#000] transform -rotate-2">
+                <h3 class="text-2xl font-bold mb-2"><i class="fas fa-mobile-alt mr-2"></i>Mobile</h3>
+                <p><i class="fab fa-apple mr-1"></i>iOS, <i class="fab fa-android mr-1"></i>Android (Flutter, Java, Kotlin)</p>
+              </div>
+             
+            </div>
+          </section>
+
+          <!-- Certifications Section -->
+          <section id="certifications" class="bg-color-3 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform rotate-1">
+            <h2 class="text-4xl font-black uppercase mb-4 text-black"><i class="fas fa-certificate mr-2"></i>Certifications</h2>
+            <ul class="list-disc list-inside">
+              <li class="text-lg mb-2"><i class="fas fa-check-circle mr-2"></i>Agile Software Development and Testing</li>
+              <li class="text-lg mb-2"><i class="fas fa-check-circle mr-2"></i>Software Deployment, Operations, and Maintenance</li>
+              <li class="text-lg"><i class="fas fa-check-circle mr-2"></i>CSSLP Cert Prep: Software Deployment, Operations, and Maintenance</li>
             </ul>
-          </div>
-          <div
-            class="bg-pastel-blue p-6 border-8 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-          >
-            <h3 class="font-display text-3xl mb-2 text-gray-900">
-              Software Developer
-            </h3>
-            <p class="text-xl mb-2">
-              <strong>Alteraid</strong> | Apr 2022 - Jan 2023
-            </p>
-            <ul class="list-disc list-inside text-lg">
-              <li>
-                Managed cloud deployment of services and applications across
-                iOS, Android, and Web platforms using Flutter, Node.js, Python,
-                and TypeScript.
-              </li>
-              <li>
-                Utilized Google Cloud for compute on VPS with full deployment.
-              </li>
-            </ul>
-          </div>
-          <div
-            class="bg-pastel-green p-6 border-8 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-          >
-            <h3 class="font-display text-3xl mb-2 text-gray-900">
-              Software Engineer
-            </h3>
-            <p class="text-xl mb-2">
-              <strong>World Health Organization and UPC</strong> | Mar 2021 -
-              Mar 2022
-            </p>
-            <ul class="list-disc list-inside text-lg">
-              <li>
-                Improved GoData (Java) software for the UPC CCD scholarship
-                project and WHO.
-              </li>
-              <li>
-                Implemented a DRM licensing system using Angular for frontend
-                and Node.js with TypeScript for backend.
-              </li>
-              <li>
-                Integrated Python for speech analysis and Text-to-Speech
-                functionalities.
-              </li>
-            </ul>
+          </section>
+
+          <!-- Contact Section -->
+          <section id="contact" class="bg-color-4 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform -rotate-1">
+            <h2 class="text-4xl font-black uppercase mb-4 text-black">Contact Me</h2>
+            <p class="text-lg mb-2">Phone: +CV</p>
+            <p class="text-lg mb-2">Email: krunalmiracle@gmail.com</p>
+            <p class="text-lg mb-4">Portfolio: <a href="https://krunalmiracle.github.io" target="_blank" class="btn bg-color-5 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">krunalmiracle.github.io</a></p>
+            <form @submit.prevent="submitForm" class="space-y-4">
+              <!-- Form fields remain unchanged -->
+              <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                <input type="text" id="name" name="name" required class="w-full px-3 py-2 border rounded-lg">
+              </div>
+              <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                <input type="email" id="email" name="email" required class="w-full px-3 py-2 border rounded-lg">
+              </div>
+              <div class="mb-4">
+                <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                <textarea id="message" name="message" required class="w-full px-3 py-2 border rounded-lg" rows="4"></textarea>
+              </div>
+              <button type="submit" class="btn bg-color-5 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Send Message</button>
+            </form>
+          </section>
+        </div>
+
+        <!-- Blog Page -->
+        <div x-show="currentPage === 'blog'" class="bg-color-5 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform rotate-1">
+          <h2 class="text-4xl font-black uppercase mb-4 text-black">Blog Posts</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <template x-for="post in blogPosts" :key="post.filename">
+              <div class="bg-white p-6 border-3 border-black shadow-[5px_5px_0_0_#000]">
+                <img x-show="post.image" :src="post.image" :alt="post.title" class="w-full h-48 object-cover mb-4 border-2 border-black">
+                <h3 class="text-2xl font-bold mb-2" x-text="post.title"></h3>
+                <p class="mb-4" x-text="post.description"></p>
+                <a href="#" @click.prevent="readBlogPost(post.filename)" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all">Read More</a>
+              </div>
+            </template>
           </div>
         </div>
-      </div>
 
-      <div x-show="currentPage === 'project'" class="space-y-12">
-        <h2 class="font-display text-6xl mb-6 text-gray-900">
-          Featured Project
-        </h2>
-        <div
-          class="bg-pastel-red p-8 border-8 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-        >
-          <h3 class="font-display text-4xl mb-4 text-gray-900">
-            Instant Helperr
-          </h3>
-          <p class="text-xl mb-4">
-            Platform connecting users with trustworthy caregivers for on-demand
-            childcare.
-          </p>
-          <ul class="list-disc list-inside text-lg mb-6">
-            <li>
-              Architected and developed a comprehensive care services platform
-            </li>
-            <li>
-              Implemented user management, job posting, smart matching, and
-              secure payments
-            </li>
-            <li>
-              Utilized SvelteKit for frontend, Node.js for backend, and SQLite
-              with Drizzle ORM for data management
-            </li>
-            <li>
-              Engineered a Docker-based deployment strategy for scalability
-            </li>
-            <li>Integrated Stripe for secure payment processing</li>
-          </ul>
-          <p class="text-xl mb-4">
-            <strong>Technologies used:</strong> SvelteKit, Node.js, SQLite,
-            Server Sent Events, Drizzle ORM, Docker, TailwindCSS, Stripe API
-          </p>
-          <a
-            href="#"
-            class="inline-block bg-pastel-yellow text-gray-900 px-6 py-3 text-2xl font-bold border-4 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all"
-            >View Project</a
-          >
-        </div>
-      </div>
-
-      <div x-show="currentPage === 'skills'" class="space-y-12">
-        <h2 class="font-display text-6xl mb-6 text-gray-900">
-          Skills & Expertise
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
-            class="bg-pastel-green p-6 border-8 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-          >
-            <h3 class="font-display text-2xl mb-4 text-gray-900">Frontend</h3>
-            <ul class="list-disc list-inside text-lg">
-              <li>React</li>
-              <li>Svelte</li>
-              <li>Flutter</li>
-              <li>Angular</li>
-              <li>Vue</li>
-              <li>Kotlin</li>
-            </ul>
-          </div>
-          <div
-            class="bg-pastel-blue p-6 border-8 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-          >
-            <h3 class="font-display text-2xl mb-4 text-gray-900">Backend</h3>
-            <ul class="list-disc list-inside text-lg">
-              <li>Node.js</li>
-              <li>Python</li>
-              <li>Java</li>
-              <li>Dart</li>
-            </ul>
-          </div>
-          <div
-            class="bg-pastel-yellow p-6 border-8 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-          >
-            <h3 class="font-display text-2xl mb-4 text-gray-900">Database</h3>
-            <ul class="list-disc list-inside text-lg">
-              <li>MySQL</li>
-              <li>Postgres</li>
-              <li>MongoDB</li>
-              <li>SQLite</li>
-            </ul>
-          </div>
-          <div
-            class="bg-pastel-pink p-6 border-8 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-          >
-            <h3 class="font-display text-2xl mb-4 text-gray-900">
-              Cloud & DevOps
-            </h3>
-            <ul class="list-disc list-inside text-lg">
-              <li>AWS</li>
-              <li>Google Cloud</li>
-              <li>Azure</li>
-              <li>Docker</li>
-              <li>Linux</li>
-            </ul>
-          </div>
-          <div
-            class="bg-pastel-red p-6 border-8 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-          >
-            <h3 class="font-display text-2xl mb-4 text-gray-900">Mobile</h3>
-            <ul class="list-disc list-inside text-lg">
-              <li>iOS</li>
-              <li>Android</li>
-              <li>Flutter</li>
-              <li>Java</li>
-              <li>Kotlin</li>
-            </ul>
-          </div>
-          <div
-            class="bg-pastel-green p-6 border-8 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-          >
-            <h3 class="font-display text-2xl mb-4 text-gray-900">
-              Project Management
-            </h3>
-            <ul class="list-disc list-inside text-lg">
-              <li>Agile</li>
-              <li>Scrum</li>
-              <li>Lean</li>
-              <li>Waterfall</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div x-show="currentPage === 'blog'" class="space-y-12">
-        <h2 class="font-display text-6xl mb-6 text-gray-900">Blog Posts</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <template x-for="post in blogPosts" :key="post.filename">
-            <div
-              class="bg-pastel-yellow p-6 border-8 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-            >
-              <h3 class="font-display text-3xl mb-2" x-text="post.title"></h3>
-              <p class="text-lg mb-4" x-text="post.description"></p>
-              <a
-                href="#"
-                @click.prevent="readBlogPost(post.filename)"
-                class="inline-block bg-pastel-red text-gray-900 px-4 py-2 text-xl font-bold border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
-                >Read More</a
-              >
+        <!-- Blog Post Content -->
+        <div x-show="currentPage === 'blogPost'" class="bg-color-1 border-4 border-black shadow-[8px_8px_0_0_#000] p-8 mb-8 transform -rotate-1">
+          <a href="#" @click.prevent="changePage('blog')" class="btn bg-color-4 text-black font-bold py-2 px-4 border-3 border-black shadow-[5px_5px_0_0_#000] hover:shadow-[3px_3px_0_0_#000] hover:translate-x-0.5 hover:translate-y-0.5 transition-all mb-4">&larr; Back to Blog</a>
+          <template x-if="currentBlogPost">
+            <div>
+              <h2 class="text-4xl font-black uppercase mb-4 text-white stroke-2 stroke-black" x-text="currentBlogPost.title"></h2>
+              <div x-html="currentBlogPost.content" class="prose prose-lg max-w-none"></div>
             </div>
           </template>
         </div>
-      </div>
+      </main>
 
-      <div x-show="currentPage === 'blogPost'" class="space-y-8">
-        <a
-          href="#"
-          @click.prevent="changePage('blog')"
-          class="inline-block bg-pastel-blue text-gray-900 px-4 py-2 text-xl font-bold border-4 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all mb-4"
-          >&larr; Back to Blog</a
-        >
-        <template x-if="currentBlogPost">
-          <div
-            class="bg-pastel-yellow p-8 border-8 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-          >
-            <h2
-              class="font-display text-4xl mb-6 text-gray-900"
-              x-text="currentBlogPost.title"
-            ></h2>
-            <div
-              x-html="currentBlogPost.content"
-              class="prose prose-xl max-w-none"
-            ></div>
+      <!-- Footer -->
+      <footer class="bg-color-2 border-4 border-black shadow-[8px_8px_0_0_#000] p-4 mt-8 transform rotate-1">
+        <div class="container mx-auto text-center">
+          <p class="text-lg font-bold">&copy; 2023 Krunal Miracle. All rights reserved.</p
           </div>
-        </template>
+        </footer>
       </div>
-
-      <div x-show="currentPage === 'contact'" class="space-y-8">
-        <h2 class="font-display text-6xl mb-6 text-gray-900">Get In Touch</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div
-            class="bg-pastel-blue p-8 border-8 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-          >
-            <h3 class="font-display text-3xl mb-4 text-gray-900">
-              Contact Information
-            </h3>
-            <ul class="mb-6 text-xl">
-              <li class="mb-2"><strong>Phone:</strong> +34 631 306 114</li>
-              <li class="mb-2">
-                <strong>Email:</strong> krunalmiracle@gmail.com
-              </li>
-              <li class="mb-2">
-                <strong>Portfolio:</strong>
-                <a
-                  href="https://krunalmiracle.github.io"
-                  class="text-pastel-red hover:underline"
-                  >krunalmiracle.github.io</a
-                >
-              </li>
-              <li class="mb-2"><strong>Location:</strong> Spain</li>
-            </ul>
-            <div class="flex space-x-4">
-              <a
-                href="#"
-                class="text-pastel-red text-xl font-bold hover:underline"
-                >LinkedIn</a
-              >
-              <a
-                href="#"
-                class="text-pastel-red text-xl font-bold hover:underline"
-                >GitHub</a
-              >
-              <a
-                href="#"
-                class="text-pastel-red text-xl font-bold hover:underline"
-                >Twitter</a
-              >
-            </div>
-          </div>
-          <div
-            class="bg-pastel-yellow p-8 border-8 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
-          >
-            <form
-              action="https://api.web3forms.com/submit"
-              method="POST"
-              id="contact-form"
-              class="space-y-4"
-            >
-              <input
-                type="hidden"
-                name="access_key"
-                value="656bd683-717c-40ac-b1c0-582efc11805e"
-              />
-              <div>
-                <label for="name" class="block mb-1 text-xl font-bold"
-                  >Name</label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  class="w-full px-3 py-2 text-xl border-4 border-gray-900"
-                />
-              </div>
-              <div>
-                <label for="email" class="block mb-1 text-xl font-bold"
-                  >Email</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  class="w-full px-3 py-2 text-xl border-4 border-gray-900"
-                />
-              </div>
-              <div>
-                <label for="message" class="block mb-1 text-xl font-bold"
-                  >Message</label
-                >
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows="4"
-                  class="w-full px-3 py-2 text-xl border-4 border-gray-900"
-                ></textarea>
-              </div>
-              <!-- hCaptcha Spam Protection -->
-              <div class="h-captcha my-1.5 p-0" data-captcha="true"></div>
-              <button
-                type="submit"
-                class="bg-pastel-red text-gray-900 px-6 py-3 text-2xl font-bold border-4 border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <footer
-      class="bg-pastel-blue text-gray-900 p-6 mt-12 border-t-8 border-gray-900"
-    >
-      <div class="container mx-auto text-center text-xl">
-        <p>&copy; 2024 Krunal Miracle. All rights reserved.</p>
-      </div>
-    </footer>
-
-    <script>
-      function app() {
-        return {
-          currentPage: "home",
-          blogPosts: [
-            {
-              filename: "post0.md",
-              title: "My First Blog Post",
-              description: "Starting a exciting new journey",
-            },
-            {
-              filename: "post1.md",
-              title: "The Future of Web Development",
-              description:
-                "Exploring emerging trends and technologies in web development.",
-            },
-            {
-              filename: "post2.md",
-              title: "Mastering Full-Stack Development",
-              description:
-                "Tips and tricks for becoming a proficient full-stack developer.",
-            },
-            {
-              filename: "post3.md",
-              title: "From Aerospace to Software Engineering",
-              description:
-                "My journey transitioning from aerospace engineering to software development.",
-            },
-          ],
-          currentBlogPost: null,
-          init() {
-            this.changePage(window.location.hash.substring(1) || "home");
-          },
-          changePage(page) {
-            this.currentPage = page;
-            if (page !== "blogPost") {
-              this.currentBlogPost = null;
-            }
-            window.location.hash = page;
-          },
-          async readBlogPost(filename) {
-            try {
-              const response = await fetch(`/blog/${filename}`);
-              if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-              }
-              const markdown = await response.text();
-              const post = this.blogPosts.find(
-                (post) => post.filename === filename
-              );
-              if (post) {
-                const parsedContent = marked.parse(markdown);
-                console.log("Parsed content:", parsedContent); // For debugging
-                this.currentBlogPost = {
-                  title: post.title,
-                  content: parsedContent,
-                };
-                this.changePage("blogPost");
-              } else {
-                console.error("Blog post not found");
-              }
-            } catch (error) {
-              console.error("Error loading blog post:", error);
-            }
-          },
-          submitForm() {
-            alert("Thank you for your message. I will get back to you soon!");
-            document.getElementById("contact-form").reset();
-          },
-        };
+  
+      <script>
+        function app() {
+          return {
+            currentPage: 'home',
+            blogPosts: [
+              { filename: 'post1.md', title: 'My First Blog Post', description: 'An exciting journey into the world of blogging.', image: 'images/cycle1.jpg' },
+              { filename: 'post2.md', title: 'Mastering Full-Stack Development', description: 'Tips and tricks for becoming a proficient full-stack developer.', image: 'images/computer.jpg' },
+              { filename: 'post3.md', title: 'The Future of Web Development', description: 'Exploring emerging trends and technologies in web development.', image: 'images/future.avif' },
+            ],
+            currentBlogPost: null,
+            init() {
+      this.changePage(window.location.hash.substring(1) || 'home');
+    },
+    changePage(page) {
+      if (page.startsWith('#')) {
+        // Handle anchor links
+        this.currentPage = 'home';
+        window.location.hash = page;
+      } else {
+        this.currentPage = page;
+        window.location.hash = page;
       }
-    </script>
-  </body>
-</html>
+    },
+            async readBlogPost(filename) {
+              try {
+                const response = await fetch(`/blog/${filename}`);
+                if (!response.ok) {
+                  throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const markdown = await response.text();
+                const post = this.blogPosts.find(post => post.filename === filename);
+                if (post) {
+                  const parsedContent = marked.parse(markdown);
+                  this.currentBlogPost = {
+                    title: post.title,
+                    content: parsedContent
+                  };
+                  this.changePage('blogPost');
+                } else {
+                  console.error('Blog post not found');
+                }
+              } catch (error) {
+                console.error('Error loading blog post:', error);
+              }
+            },
+            submitForm() {
+              // Add your form submission logic here
+              alert('Form submitted!');
+            }
+          }
+        }
+      </script>
+    </body>
+  </html>
